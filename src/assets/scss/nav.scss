@@ -1,0 +1,35 @@
+@import 'theme.scss';
+
+mat-sidenav-container {
+  background-color: $background !important;
+  min-height: 100vh;
+
+  mat-sidenav {
+    background-color: $background !important;
+    min-width: 170px;
+    // z-index: 0;
+
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+
+      button {
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
+        width: 100%;
+        padding: 5px;
+        color: $accent;
+      }
+    }
+  }
+
+  mat-sidenav-content {
+    // display: flex;
+
+    .content {
+      margin: 10px 30px;
+      flex: 1;
+    }
+  }
+}

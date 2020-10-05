@@ -1,0 +1,133 @@
+@import './theme.scss';
+@import './flex.scss';
+
+
+
+.dialog-container {
+  @include fxLayoutAlign(flex-start, stretch, column);
+  overflow: hidden;
+  max-height: 90vh;
+
+  .dialog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary;
+    color: white;
+
+    .title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      padding: 20px;
+    }
+  }
+
+  .dialog-content {
+    @include fxLayoutAlign(flex-start, stretch, column);
+    flex: 1;
+    padding: 10px;
+    background-color: white;
+    overflow-y: scroll;
+
+  }
+
+  .dialog-action {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid $background;
+
+    button {
+      margin: 5px;
+    }
+  }
+
+
+}
+
+.tiny-dialog {
+  width: 20vw;
+}
+
+.xsmall-dialog {
+  width: 30vw;
+}
+
+.small-dialog {
+  width: 40vw;
+}
+
+.medium-dialog {
+  width: 60vw;
+}
+
+.large-dialog {
+  width: 1200px;
+}
+
+
+
+
+form {
+  // width: 100%;
+  @include fxLayoutAlign(flex-start, stretch, column);
+
+  .col-2-field {
+    @include fxLayoutAlign(flex-start, stretch, row);
+
+    .mat-form-field,
+    .mat-slide-toggle {
+      margin-left: 10px !important;
+    }
+
+    .mat-form-field:last-child,
+    .mat-slide-toggle:last-child {
+      margin-left: 0;
+    }
+
+  }
+
+
+  .mat-slide-toggle {
+    height: 60px;
+
+  }
+
+
+}
+
+
+
+/*---------------------------------------------
+----------[ scrollable dialog Styles ]--------
+-----------------------------------------------*/
+::ng-deep {
+  .cdk-overlay-container {
+    overflow: auto !important;
+    // pointer-events: auto !important;
+  }
+
+  .cdk-overlay-connected-position-bounding-box {
+    pointer-events: none !important;
+  }
+
+
+  .cdk-overlay-backdrop {
+    position: fixed !important;
+  }
+
+  .cdk-global-overlay-wrapper {
+    pointer-events: auto !important;
+    overflow-x: hidden;
+  }
+
+  .mat-dialog-container {
+    padding: 0 !important;
+    margin: 50px 0;
+    // overflow: unset;
+    border-radius: 8px !important;
+  }
+}

@@ -1,0 +1,93 @@
+@import 'theme.scss';
+@import 'flex.scss';
+
+
+
+
+@mixin pgPaginator() {
+  @include fxLayoutAlign(center, center);
+
+  mat-form-field {
+    margin-top: -10px;
+
+    .mat-form-field-infix {
+      padding: 11px 0;
+    }
+  }
+
+  .mat-paginator-range-label,
+  .mat-paginator-page-size-label {
+    font-size: 1.08em;
+  }
+
+  .mat-paginator-range-actions {
+    align-items: center;
+  }
+}
+
+
+@mixin pgControl() {
+  .ngx-pagination {
+    text-align: center;
+
+    .pagination-next a::after,
+    .pagination-next.disabled::after {
+      content: none;
+    }
+
+    .pagination-previous a::before,
+    .pagination-previous.disabled::before {
+      content: none;
+    }
+
+    .pagination-next,
+    .pagination-previous {
+      width: 80px;
+    }
+
+    // .pagination-previous a,
+    // .pagination-next a {
+    //   width: 60px;
+    // }
+
+    // .pagination-next.disabled,
+    // .pagination-previous.disabled {
+    //   width: 60px;
+    // }
+
+    .current {
+      background: $accent;
+      min-width: 13px;
+
+      .ng-star-inserted {
+        color: #fff !important;
+      }
+    }
+
+    li.ng-star-inserted {
+      border-radius: 20px;
+      margin: 0 5px;
+      border: 1px solid $primary;
+      color: white;
+    }
+
+    li.ng-star-inserted:hover {
+      border: 1px solid $primary;
+    }
+
+    a,
+    button {
+      color: $primary !important;
+      transition: all 200ms ease;
+      min-width: 13px;
+    }
+
+    a:hover,
+    button:hover {
+      border-radius: 20px;
+      background: $primary;
+      color: white !important;
+      border: none !important;
+    }
+  }
+}

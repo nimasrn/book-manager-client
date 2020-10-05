@@ -1,0 +1,28 @@
+@mixin fxDirection($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin fxLayoutAlign($main-axis: start, $cross-axis: start, $direction: row) {
+  display: flex;
+  justify-content: $main-axis;
+  align-items: $cross-axis;
+  flex-direction: $direction;
+}
+
+@mixin fxFlex() {
+  flex: 1 1 0%;
+  box-sizing: border-box; 
+}
+
+@mixin fxFlexSize($value) {
+  flex: 1 1 100%;
+  max-width: $value;
+  box-sizing: border-box;
+}
+
+@mixin fxCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

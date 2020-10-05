@@ -1,0 +1,213 @@
+@import "~@angular/material/theming";
+@include mat-core();
+$md-primary: (50 : #e0f7f7,
+  100 : #b3eaea,
+  200 : #80dddd,
+  300 : #4dcfcf,
+  400 : #26c4c4,
+  500 : #00baba,
+  600 : #00b3b3,
+  700 : #00abab,
+  800 : #00a3a3,
+  900 : #009494,
+  A100 : #bfffff,
+  A200 : #8cffff,
+  A400 : #59ffff,
+  A700 : #40ffff,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #000000,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  ));
+
+$md-accent: (50 : #edeff3,
+  100 : #d2d8e1,
+  200 : #b4becd,
+  300 : #96a4b8,
+  400 : #8091a9,
+  500 : #697d9a,
+  600 : #617592,
+  700 : #566a88,
+  800 : #4c607e,
+  900 : #3b4d6c,
+  A100 : #c0d7ff,
+  A200 : #8db6ff,
+  A400 : #5a95ff,
+  A700 : #4185ff,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #ffffff,
+  ));
+/* For use in src/lib/core/theming/_palette.scss */
+$md-warn: (50 : #fdeaea,
+  100 : #fbcbcb,
+  200 : #f8a8a8,
+  300 : #f58585,
+  400 : #f26a6a,
+  500 : #f05050,
+  600 : #ee4949,
+  700 : #ec4040,
+  800 : #e93737,
+  900 : #e52727,
+  A100 : #ffffff,
+  A200 : #ffeeee,
+  A400 : #ffbbbb,
+  A700 : #ffa1a1,
+  contrast: (50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  ));
+
+
+$app-pimary: mat-palette($md-primary);
+$app-accent: mat-palette($md-accent);
+$app-warn: mat-palette($md-warn);
+
+$app-theme: mat-light-theme($app-pimary, $app-accent, $app-warn);
+
+$primary: mat-color($app-pimary);
+$accent: mat-color($app-accent);
+$warn: mat-color($app-warn);
+
+$background: mat-color($app-accent, 50);
+/******* COLORFULL *******/
+
+$orange: #ffcc45;
+$green: #2ecc71;
+$red: #ff263f;
+$blue: #2c73ff;
+$purple: #6772c1;
+$success: #5cb85c;
+$danger: #f05050;
+/******* THEME *******/
+
+@include angular-material-theme($app-theme);
+
+.white {
+  color: white !important;
+}
+
+.grey {
+  color: $accent !important;
+}
+
+.green {
+  color: $green !important;
+}
+
+.primary {
+  color: $primary !important;
+}
+
+.accent {
+  color: $accent !important;
+}
+
+.warn {
+  color: $warn !important;
+}
+
+.purple {
+  color: $purple !important;
+}
+
+.orange {
+  color: $orange !important;
+}
+
+.success {
+  color: $green !important;
+}
+
+.info {
+  color: $orange !important;
+}
+
+// success color
+.mat-button.mat-success,
+.mat-stroked-button.mat-success {
+  color: $green;
+}
+
+.mat-button.mat-success:hover,
+.mat-stroked-button.mat-success:hover {
+  background-color: #f0fff3;
+}
+
+.mat-raised-button.mat-success,
+.mat-flat-button.mat-success,
+.mat-fab.mat-success,
+.mat-mini-fab.mat-success {
+  color: #f0fff3;
+  background-color: $green;
+}
+
+.mat-icon-button.mat-success {
+  color: $green;
+}
+
+// white color
+.mat-button.mat-white,
+.mat-stroked-button.mat-white {
+  color: white;
+}
+
+.mat-button.mat-white:hover,
+.mat-stroked-button.mat-white:hover {
+  // background-color: #f0fff3;
+}
+
+.mat-raised-button.mat-white,
+.mat-flat-button.mat-white,
+.mat-fab.mat-white,
+.mat-mini-fab.mat-white {
+  // color: #f0fff3;
+  background-color: white;
+}
+
+.mat-icon-button.mat-white {
+  color: white;
+}
+
+// white spinner
+.mat-progress-spinner.mat-white circle,
+.mat-spinner.mat-white circle {
+  stroke: white;
+}
+
+// input style
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: white;
+}
