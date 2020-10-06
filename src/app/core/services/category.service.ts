@@ -7,17 +7,18 @@ import { MainService } from './main.service';
 @Injectable({
   providedIn: 'root'
 })
-export class bookService {
+export class CategoryService {
 
   constructor(
     private http: HttpClient,
 
   ) { }
-  get(page): Observable<any> {
-    return this.http.get(environment.api_url + `/books?page=${page}`);
+  get(): Observable<any> {
+    return this.http.get(environment.api_url + `/categories`);
   }
+
   create(data): Observable<any> {
-    return this.http.post(environment.api_url + `/books`, data);
+    return this.http.post(environment.api_url + `/categories`, data);
   }
 
   getById(id): Observable<any> {

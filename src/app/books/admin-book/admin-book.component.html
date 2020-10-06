@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="title">create book</div>
+  <app-loading *ngIf="loading"></app-loading>
+  <form [formGroup]="form" class="form" *ngIf="!loading">
+    <mat-form-field appearance="fill">
+      <mat-label>title</mat-label>
+      <input type="text" matInput formControlName="title">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>ISBN</mat-label>
+      <input type="text" matInput formControlName="ISBN">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>categories</mat-label>
+      <mat-select formControlName="categories" multiple>
+        <mat-option *ngFor="let cat of categories" [value]="cat">{{cat.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" type="submit" (click)="addBook()"
+      [disabled]="form.invalid || addBookLoading">
+      <span *ngIf="!addBookLoading">submit</span>
+      <app-loading *ngIf="addBookLoading"></app-loading>
+    </button>
+  </form>
+  <div class="title">create category</div>
+  <form [formGroup]="categoryForm" class="form" *ngIf="!loading">
+    <mat-form-field appearance="fill">
+      <mat-label>name</mat-label>
+      <input type="text" matInput formControlName="name">
+    </mat-form-field>
+
+    <button mat-flat-button color="primary" type="submit" (click)="addCategory()"
+      [disabled]="categoryForm.invalid || addCategoryLoading">
+      <span *ngIf="!addCategoryLoading">submit</span>
+      <app-loading *ngIf="addCategoryLoading"></app-loading>
+    </button>
+  </form>
+</div>

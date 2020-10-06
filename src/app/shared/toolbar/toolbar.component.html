@@ -5,6 +5,7 @@
     </button>
     <button mat-flat-button color="primary" (click)="redirect('/books')">books</button>
     <button mat-flat-button color="primary" (click)="redirect('/auth/login')" *ngIf="!user">login</button>
+    <button mat-flat-button color="primary" (click)="redirect('/books/admin')" *ngIf="user">admin</button>
     <span class="example-spacer"></span>
     <div class="user" *ngIf="user">
       <button mat-icon-button [matMenuTriggerFor]="menu" color="white">

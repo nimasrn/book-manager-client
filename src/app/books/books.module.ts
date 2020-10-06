@@ -10,6 +10,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BooksComponent } from './books.component';
 import { BookComponent } from './book/book.component';
+import { AdminBookComponent } from './admin-book/admin-book.component';
 
 
 
@@ -18,6 +19,7 @@ import { BookComponent } from './book/book.component';
     BooksComponent,
     BookListComponent,
     BookComponent,
+    AdminBookComponent
   ],
   imports: [
     CommonModule,
