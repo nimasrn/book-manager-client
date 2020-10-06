@@ -1,0 +1,32 @@
+@import "theme.scss";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-ms-clear {
+    display: none;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  mat-toolbar {
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+
+
+    button {
+      min-width: auto;
+    }
+  }
+}

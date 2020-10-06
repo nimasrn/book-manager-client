@@ -1,0 +1,12 @@
+<div class="dialog-container">
+  <div class="dialog-header">
+    <div class="title">توجه</div>
+  </div>
+  <div class="dialog-content">
+    {{data.body}}
+  </div>
+  <div class="dialog-action">
+    <button mat-flat-button color="primary" (click)="confirm()">confirm</button>
+    <button mat-stroked-button color="warn" (click)="cancell()">cancel</button>
+  </div>
+</div>

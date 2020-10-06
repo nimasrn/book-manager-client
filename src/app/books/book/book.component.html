@@ -1,0 +1,23 @@
+<mat-card class="card">
+  <mat-card-header>
+    <div mat-card-avatar class="header-image" [style.background]="'url('+ book.cover.small + ')'"></div>
+    <mat-card-title>name: {{book.title}}</mat-card-title>
+    <mat-card-subtitle>
+      <ul *ngFor="let item of book.authors">
+        <li>{{item.name}}</li>
+      </ul>
+    </mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{book.cover.large}}" alt="'large photo of' + {{book.name}}">
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem"></mat-list-item>
+      <mat-list-item role="listitem">categoreis:
+        <ul *ngFor="let item of book.categories">
+          <li>{{item.name}}</li>
+        </ul>
+      </mat-list-item>
+
+    </mat-list>
+  </mat-card-content>
+</mat-card>
