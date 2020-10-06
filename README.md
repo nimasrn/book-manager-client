@@ -1,5 +1,7 @@
 # BookManagerClient
 
+[demo]: https://5f7ca2f8de7a2b00b470d259--adoring-franklin-2a2ffe.netlify.app
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.12.
 
 ## Development server
