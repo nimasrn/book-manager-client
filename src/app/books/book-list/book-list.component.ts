@@ -14,7 +14,7 @@ import { Router } from '@angular/router';
 })
 export class BookListComponent implements OnInit {
 
-  displayedColumns: string[] = ['title', 'ISBN', 'categories'];
+  displayedColumns: string[] = ['title', 'ISBN', 'categories', 'more'];
   data: [] = [];
 
   resultsLength = 0;
