@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './material/material.module';
 import { NotfoundComponent } from './notfound/notfound.component';
-import { PriceDirective } from './directive/price.directive';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -30,7 +29,6 @@ import { PageHeaderComponent } from './page-header/page-header.component';
 
     ToolbarComponent,
     NotfoundComponent,
-    PriceDirective,
     ConfirmDialogComponent,
     LoadingComponent,
     PageHeaderComponent
@@ -39,7 +37,6 @@ import { PageHeaderComponent } from './page-header/page-header.component';
     LoaderComponent,
     ToolbarComponent,
     NotfoundComponent,
-    PriceDirective,
     ConfirmDialogComponent,
     LoadingComponent,
     PageHeaderComponent,

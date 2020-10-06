@@ -2,7 +2,7 @@
   <div class="loading-shade" *ngIf="isLoadingResults || isRateLimitReached">
     <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
     <div class="rate-limit-reached" *ngIf="isRateLimitReached">
-      GitHub's API rate limit has been reached. It will be reset in one minute.
+      <app-notfound></app-notfound>
     </div>
   </div>
 

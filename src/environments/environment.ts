@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  api_url: 'http://localhost:3000',
+  // api_url: 'http://localhost:3000',
+  api_url: 'https://book-management-server.herokuapp.com',
   version: '0.1.1'
 };
 
