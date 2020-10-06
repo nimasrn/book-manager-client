@@ -77,6 +77,7 @@ export class AdminBookComponent implements OnInit {
     this.addBookLoading = true;
     this.bookService.create(this.form.value).subscribe(res => {
       this.addBookLoading = false;
+      this.form.reset();
     }, err => {
       this.mainService.showErrorSnackBar(ErrorMessage(err));
       this.addBookLoading = false;
@@ -87,6 +88,7 @@ export class AdminBookComponent implements OnInit {
     this.addCategoryLoading = true;
     this.categoryService.create(this.categoryForm.value).subscribe(res => {
       this.addCategoryLoading = false;
+      this.categoryForm.reset();
     }, err => {
       this.mainService.showErrorSnackBar(ErrorMessage(err));
       this.addCategoryLoading = false;
